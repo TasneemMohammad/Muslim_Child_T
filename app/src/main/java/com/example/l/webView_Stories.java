@@ -22,5 +22,6 @@ public class webView_Stories extends AppCompatActivity {
         page++;
         web_stories.loadUrl("https://www.facebook.com" );
         Toast.makeText(this,"test",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"test6",Toast.LENGTH_LONG).show();
     }
 }
