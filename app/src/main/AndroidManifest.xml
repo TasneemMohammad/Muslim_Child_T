@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Educational_Stories"></activity>
+        <activity android:name=".web_view_quraan"></activity>
+        <activity android:name=".Educational_Stories" />
         <activity android:name=".Entertainment_Stories" />
         <activity android:name=".splash">
             <intent-filter>
