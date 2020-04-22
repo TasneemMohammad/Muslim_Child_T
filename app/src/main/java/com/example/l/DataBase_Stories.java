@@ -23,15 +23,12 @@ public class DataBase_Stories extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {     // it's called  when construct dataBase , db variable from db .
-        db.execSQL("CREATE TABLE "+ STORY_TB_NAME +" ("+ STORY_CLN_ID_IMG +" INTEGER ,"+" "+ STORY_CLN_STORYNAME + " TEXT)");
-
-    }
-
+        db.execSQL("CREATE TABLE "+ STORY_TB_NAME +" ("+ STORY_CLN_ID_IMG +" INTEGER ,"+" "+ STORY_CLN_STORYNAME + " TEXT)"); }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {   // it's called in every update for database =  it's caalled when change the value of version .
         db.execSQL("DROP TABLE IF EXISTS " + STORY_TB_NAME);                                   // if you add thing to db or you changed the version  .. it will delete db and create it again .
-        onCreate(db);                                                              // we use ALTER when the app is download actualy ...
-    }
+        onCreate(db);                                                              // we use ALTER when the app is download actualy ...//
+         }
     public boolean insertStory(Stories_Card stories_card){
         SQLiteDatabase db = getWritableDatabase();  // key = the name of cln , value : stories_card .
         ContentValues values = new ContentValues();  // this class store the value that i want add it to the table .

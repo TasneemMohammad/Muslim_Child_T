@@ -113,7 +113,7 @@ public class webView_Stories extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sound.stop();
-                sound.start();
+
             }
         });
 

@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.l">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="الطفل المسلم"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".web_view_quraan"></activity>
         <activity android:name=".Educational_Stories" />
         <activity android:name=".Entertainment_Stories" />
-        <activity android:name=".splash">
+
+        <activity android:name=".splash_Screen"
+            android:screenOrientation="sensorLandscape">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Educational_Stories" />
+        <activity android:name=".Entertainment_Stories" />
         <activity android:name=".Anbyaa_Stories" />
         <activity android:name=".webView_Stories" />
         <activity android:name=".Quran" />
         <activity android:name=".Azkar_A7adeeth" />
         <activity android:name=".Stories" />
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".MainActivity"
+          android:screenOrientation="sensorLandscape"
+            >
         </activity>
     </application>
-
 </manifest>

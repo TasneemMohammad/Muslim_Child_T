@@ -1,8 +1,8 @@
 package com.example.l;
 
 public class QuranDataBase {
-    String name;
-    int img;
+ private    String name;
+   private int img;
 
     public QuranDataBase(String name, int img) {
         this.name = name;

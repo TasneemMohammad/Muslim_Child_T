@@ -6,10 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Quran"
-    android:padding="5dp"
-    android:layout_margin="5dp"
-    android:id="@+id/linear_layout"
-    android:background="@drawable/gradient1">
+
+
+   >
 
     <TextView
         android:id="@+id/txt_title_name"
@@ -19,7 +18,7 @@
         android:padding="10dp"
         android:layout_gravity="center"
         android:text=" جزء عم "
-        android:textColor="@color/brown"
+        android:textColor="#000"
         android:textSize="35sp"
         android:textStyle="italic"/>
 
@@ -27,6 +26,7 @@
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:background="@color/colorAccent"
+       />
 
 </LinearLayout>

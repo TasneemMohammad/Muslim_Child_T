@@ -13,13 +13,14 @@ import java.util.ArrayList;
 import java.util.concurrent.Callable;
 
 public class Recycler_Adapter_Stories extends RecyclerView.Adapter<Recycler_Adapter_Stories.ViewHolderStories> {
-   public static int position1 ;
+
+    OnClickListener_Stories listener_stories ;
+    ArrayList<Stories_Card> arrayList ;
     public Recycler_Adapter_Stories( ArrayList<Stories_Card> arrayList, OnClickListener_Stories listener_stories) {
         this.listener_stories = listener_stories;
         this.arrayList = arrayList;
     }
-    OnClickListener_Stories listener_stories ;
-    ArrayList<Stories_Card> arrayList ;
+
     @NonNull
     @Override
     public ViewHolderStories onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -33,7 +34,7 @@ public class Recycler_Adapter_Stories extends RecyclerView.Adapter<Recycler_Adap
         Stories_Card c =  arrayList.get(position);
         holder.img_story .setImageResource(c.getId());
         holder.tv_story_name.setText(c.getNameStory());
-        position1 = (holder.getAdapterPosition());
+
     }
 
     @Override

@@ -15,12 +15,10 @@ import java.util.ArrayList;
 
     public class DataBase extends SQLiteOpenHelper {
         public static final String DB_NAME = " quraan_db ";
-        public static final int DB_VERSION = 1;
-
-
+        public static final int DB_VERSION =1;
         public static final String QURAAN_TABLE_NAME = "quraan";
-        public static final String QURAAN_COLUMN_SORA = "name of sora";
-        public static final String QURAAN_COLUMN_ID_IMG = "id ";
+        public static final String QURAAN_COLUMN_SORA = " namesora ";
+        public static final String QURAAN_COLUMN_ID_IMG = "id";
 
 
         public DataBase(@Nullable Context context) {
@@ -29,7 +27,7 @@ import java.util.ArrayList;
 
         @Override
         public void onCreate(SQLiteDatabase db) {
-            db.execSQL("CREATE TABLE " + QURAAN_TABLE_NAME + "(" + QURAAN_TABLE_NAME + "TEXT," + QURAAN_COLUMN_ID_IMG + "INTEGER )");
+            db.execSQL("CREATE TABLE "+ QURAAN_TABLE_NAME +" ("+ QURAAN_COLUMN_SORA+" TEXT,"+" "+ QURAAN_COLUMN_ID_IMG + " INTEGER)");
 
         }
 
@@ -40,35 +38,31 @@ import java.util.ArrayList;
         }
 
         public boolean insertquraan(QuranDataBase quraanDataBase) {
-            SQLiteDatabase sqLiteDatabase = getWritableDatabase();
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(QURAAN_COLUMN_SORA, quraanDataBase.getName());
-            contentValues.put(QURAAN_COLUMN_ID_IMG, quraanDataBase.getImg());
-            long result = sqLiteDatabase.insert("QURAAN_TABLE_NAME", null, contentValues);
-            return result != -1;
-
+            SQLiteDatabase db = getWritableDatabase();  // key = the name of cln , value : stories_card .
+            ContentValues values = new ContentValues();  // this class store the value that i want add it to the table .
+            values.put(QURAAN_COLUMN_ID_IMG , quraanDataBase.getImg()); // add to this cln .. this value .
+            values.put(QURAAN_COLUMN_SORA ,quraanDataBase.getName());
+            long result =  db.insert(QURAAN_TABLE_NAME , null,values);
+            return result != -1 ;
             // if (result == -1)
             //  return false;
             //else return true;
         }
 
-        public ArrayList<QuranDataBase> getallsor() {
-            ArrayList<QuranDataBase> Quraa_card = new ArrayList<>();
-            SQLiteDatabase sqLiteDatabase = getReadableDatabase();
-            Cursor cursor = sqLiteDatabase.rawQuery(" SELECT * FROM " + QURAAN_TABLE_NAME, null);
-            if ((cursor != null) && cursor.moveToFirst()) {
+        public ArrayList getallsor() {
+            ArrayList <QuranDataBase> stories_cards = new ArrayList<>();
+            SQLiteDatabase db = getReadableDatabase();
+            Cursor cursor= db.rawQuery( "SELECT * FROM " +  QURAAN_TABLE_NAME ,null );
+            if(cursor!=null &&cursor.moveToFirst()){
                 do {
-                    String name;
-                    int img;
-                    name = cursor.getString(cursor.getColumnIndex("QURAAN_COLUMN_SORA"));
-                    img = cursor.getInt(cursor.getColumnIndex("QURAAN_COLUMN_ID_IMG"));
-                    QuranDataBase quraanDataBase = new QuranDataBase(name, img);
-                    Quraa_card.add(quraanDataBase);
-                    cursor.close();
-
-                } while (cursor.moveToNext());
+                    String name = cursor.getString(cursor.getColumnIndex(QURAAN_COLUMN_SORA));
+                    int id = cursor.getInt(cursor.getColumnIndex(QURAAN_COLUMN_ID_IMG));
+                    QuranDataBase stories_card = new QuranDataBase(name, id);
+                    stories_cards.add(stories_card);
+                }while (cursor.moveToNext());
+                cursor.close();
             }
-            return Quraa_card;
+            return stories_cards ;
         }
 
     }

@@ -3,4 +3,6 @@
     <color name="colorPrimary">@android:color/transparent</color>
     <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#C1EDF1</color>
+    <color name="light_blue" />
+    <color name="BEG" />
 </resources>
