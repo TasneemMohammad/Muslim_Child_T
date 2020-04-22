@@ -10,10 +10,10 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-class DataBase {
 
 
-    public static class DataBase_Quraan extends SQLiteOpenHelper {
+
+    public class DataBase extends SQLiteOpenHelper {
         public static final String DB_NAME = " quraan_db ";
         public static final int DB_VERSION = 1;
 
@@ -23,7 +23,7 @@ class DataBase {
         public static final String QURAAN_COLUMN_ID_IMG = "id ";
 
 
-        public DataBase_Quraan(@Nullable Context context) {
+        public DataBase(@Nullable Context context) {
             super(context, DB_NAME, null, DB_VERSION);
         }
 
@@ -72,5 +72,5 @@ class DataBase {
         }
 
     }
-}
+
 
