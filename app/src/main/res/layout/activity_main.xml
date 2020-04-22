@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/btn_quran"
-        android:layout_width="170dp"
-        android:layout_height="180dp"
+        android:layout_width="160dp"
+        android:layout_height="170dp"
         android:layout_alignParentBottom="true"
         android:src="@drawable/quran"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/btn_stories"
-        android:layout_width="170dp"
-        android:layout_height="180dp"
+        android:layout_width="180dp"
+        android:layout_height="190dp"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/btn_quran"
         android:outlineSpotShadowColor="#000"
@@ -38,8 +38,8 @@
 
     <ImageView
         android:id="@+id/btn_azkar"
-        android:layout_width="170dp"
-        android:layout_height="180dp"
+        android:layout_width="160dp"
+        android:layout_height="170dp"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/btn_stories"
         android:src="@drawable/azkaar"
@@ -52,8 +52,8 @@
 
     <ImageView
         android:id="@+id/btn_anasheed"
-        android:layout_width="170dp"
-        android:layout_height="180dp"
+        android:layout_width="160dp"
+        android:layout_height="170dp"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/btn_azkar"
         android:src="@drawable/anasheed"

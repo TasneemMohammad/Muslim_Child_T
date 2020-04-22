@@ -8,6 +8,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -21,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.sound);
+        final MediaPlayer qassas= MediaPlayer.create(MainActivity.this,R.raw.qassas_voice);
         img_stories = findViewById(R.id.btn_stories);
         img_anasheed = findViewById(R.id.btn_anasheed);
         img_azkar = findViewById(R.id.btn_azkar);
@@ -29,8 +32,9 @@ public class MainActivity extends AppCompatActivity {
         img_stories.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mediaPlayer.start();
-
+              qassas.start();
+                Intent intent = new Intent(MainActivity.this, Stories.class);
+                startActivity(intent);
             }
         });
 
@@ -50,11 +54,9 @@ public class MainActivity extends AppCompatActivity {
         });
         img_quran.setOnClickListener(new View.OnClickListener() {
             @Override
-
+            //Arwa
             public void onClick(View v) {
                 mediaPlayer.start();
-                Intent intent = new Intent(MainActivity.this, Quran.class);
-                startActivity(intent);
             }
         });
     }}

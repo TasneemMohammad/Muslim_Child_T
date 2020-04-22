@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.transition.Scene;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -17,6 +19,7 @@ public class Stories extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stories);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         btn_anbyaa_stories = findViewById(R.id.img_anbya_stories);
         btn_educatioal_stories = findViewById(R.id.img_edu_stories);
         btn_entertainment_stories = findViewById(R.id.img_ent_stories);
@@ -24,6 +27,7 @@ public class Stories extends AppCompatActivity {
        btn_anbyaa_stories.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
+
         Intent intent=new Intent(Stories.this,Anbyaa_Stories.class);
         startActivity(intent);
     }

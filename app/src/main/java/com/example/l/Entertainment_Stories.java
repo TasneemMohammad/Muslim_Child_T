@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.BlockedNumberContract;
+import android.view.WindowManager;
 
 import java.util.ArrayList;
 
@@ -18,9 +19,9 @@ public class Entertainment_Stories extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entertainment__stories);
-        rv_entermainment_stories = findViewById(R.id.rv_educational_stories);
+        rv_entermainment_stories = findViewById(R.id.rv_anbyaa_stories);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         db = new DataBase_Stories(this);
-        rv_entermainment_stories = (RecyclerView)findViewById(R.id.rv_educational_stories);
         Stories = new ArrayList<>();        // khleh yget men el data base ;
         Stories_Card story1 = new Stories_Card("قصة الأسد والأرنب" ,R.drawable.icon);
         Stories_Card story2 = new Stories_Card("قصة الأسد والأرنب" ,R.drawable.icon);

@@ -5,11 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Educational_Stories"
-    android:background="@color/colorAccent">
-    <androidx.recyclerview.widget.RecyclerView
-
-        android:id="@+id/rv_educational_stories"
-        android:layout_width= "match_parent"
-        android:layout_height="match_parent"
-        />
+    android:background="@drawable/gradiant">
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rv_eduStory"/>
 </RelativeLayout>

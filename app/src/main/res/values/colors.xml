@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="brown">#C6AA55</color>
-    <color name="colorPrimaryDark">#108A77</color>
-    <color name="colorAccent">#BF9FAB</color>
-    <color name="dark_blue">#17A58E</color>
-    <color name="white">#FFFFFF</color>
-    <color name="light_blue">#85FFF5</color>
-    <color name="BEG">#EFDFAF</color>
+    <color name="colorPrimary">@android:color/transparent</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#C1EDF1</color>
 </resources>

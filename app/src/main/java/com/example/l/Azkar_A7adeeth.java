@@ -10,5 +10,6 @@ public class Azkar_A7adeeth extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_azkar__a7adeeth);
+
     }
 }

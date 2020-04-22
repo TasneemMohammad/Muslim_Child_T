@@ -50,7 +50,7 @@ public class Recycler_Adapter_Stories extends RecyclerView.Adapter<Recycler_Adap
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    listener_stories.onClick(position1);
+                    listener_stories.onClick(getAdapterPosition());
 
                 }
             });
