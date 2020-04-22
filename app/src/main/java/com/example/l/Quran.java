@@ -20,8 +20,6 @@ public class Quran extends AppCompatActivity {
     LinearLayout linearLayout ;
     DataBase dataBase ;
     ArrayList<QuranDataBase> quraan_list ;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,9 +27,9 @@ public class Quran extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
         linearLayout = (LinearLayout) findViewById(R.id.linear_layout);
         quraan_list = new ArrayList<>();
-        dataBase = new DataBase(Quran.this);
+        dataBase = new DataBase(this);
         QuranDataBase first = new QuranDataBase( " سورة عم ",R.drawable.boy);
-        quraan_list = dataBase.getallsor ;
+        quraan_list = dataBase.getAllQuran();
         AnimationDrawable animationDrawable = (AnimationDrawable) linearLayout.getBackground();
         animationDrawable.setEnterFadeDuration(2000);
         animationDrawable.setExitFadeDuration(5000);
@@ -42,7 +40,7 @@ public class Quran extends AppCompatActivity {
         Adapter adapter = new Adapter(quraan, new OnClickListener_Stories() {
             @Override
             public void onClick(int position) {
-                Intent intent = new Intent(Quran.this,WebView_quraan.class);
+                Intent intent = new Intent(Quran.this,web_view_quraan.class);
                 intent.putExtra("page",position);
                 intent.putExtra("sound",position );
                 startActivity(intent);

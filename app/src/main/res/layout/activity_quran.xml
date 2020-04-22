@@ -9,10 +9,7 @@
     android:padding="5dp"
     android:layout_margin="5dp"
     android:id="@+id/linear_layout"
-    android:background="@drawable/gradient_list"
-    >
-
-
+    android:background="@drawable/gradient_list">
     <TextView
         android:id="@+id/txt_title_name"
         android:layout_width="wrap_content"
@@ -30,6 +27,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1" />
-
 
 </LinearLayout>
