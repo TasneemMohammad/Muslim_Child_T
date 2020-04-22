@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
             //Arwa
             public void onClick(View v) {
                 mediaPlayer.start();
+                Intent intent = new Intent(MainActivity.this, Quran.class);
+                startActivity(intent);
 
             }
         });
