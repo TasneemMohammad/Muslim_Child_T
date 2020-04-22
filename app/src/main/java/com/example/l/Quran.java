@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class Quran extends AppCompatActivity {
     RecyclerView recyclerView;
     LinearLayout linearLayout ;
     DataBase dataBase ;
+    TextView textView
     ArrayList<QuranDataBase> quraan_list ;
 
 
@@ -26,6 +28,7 @@ public class Quran extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quran);
+        textView = (TextView)findViewById(R.id.txt_title_name);
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
         linearLayout = (LinearLayout) findViewById(R.id.linear_layout);
         quraan_list = new ArrayList<>();
