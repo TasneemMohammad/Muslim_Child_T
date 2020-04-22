@@ -46,6 +46,7 @@ public class Quran extends AppCompatActivity {
                 intent.putExtra("page",position);
                 intent.putExtra("sound",position );
                 startActivity(intent);
+                Toast.makeText(Quran.this, "arwa", Toast.LENGTH_SHORT).show();
             }
 
         });
