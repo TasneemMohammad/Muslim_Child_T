@@ -7,17 +7,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.myviewholder> {
-    ArrayList<QuranDataBase> arrayList;
+    ArrayList<modelQuran> arrayList;
     OnClickListener_Stories mylistener;
 
-    public Adapter(ArrayList<QuranDataBase> arrayList, OnClickListener_Stories onClickListener_stories) {
-        this.arrayList = arrayList;
+    public Adapter(ArrayList<modelQuran> arrayList1, OnClickListener_Stories onClickListener_stories) {
+        this.arrayList = arrayList1;
         this.mylistener = onClickListener_stories;
 
     }
@@ -25,7 +24,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.myviewholder> {
     @NonNull
     @Override
     public Adapter.myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main2,null, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_quraan, parent, false);
         myviewholder myviewholder = new myviewholder(view);
 
         return myviewholder;
@@ -33,9 +32,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.myviewholder> {
 
     @Override
     public void onBindViewHolder(@NonNull Adapter.myviewholder holder, int position) {
-
         holder.textView.setText(arrayList.get(position).getName());
-    holder.imageView.setImageResource(arrayList.get(position).getImg());
+        holder.imageView.setImageResource(arrayList.get(position).getImage());
 
     }
 
@@ -45,13 +43,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.myviewholder> {
     }
 
     public class myviewholder extends RecyclerView.ViewHolder {
-       ImageView imageView;
+        ImageView imageView;
         TextView textView;
 
 
         public myviewholder(@NonNull View itemView) {
             super(itemView);
-             imageView = (ImageView) itemView.findViewById(R.id.img_quran);
+            imageView = (ImageView) itemView.findViewById(R.id.icon);
             textView = (TextView) itemView.findViewById(R.id.text);
 
             itemView.setOnClickListener(new View.OnClickListener() {
