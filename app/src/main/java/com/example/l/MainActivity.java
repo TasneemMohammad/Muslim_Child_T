@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         });
         img_quran.setOnClickListener(new View.OnClickListener() {
             @Override
-            //Arwa
+
             public void onClick(View v) {
                 mediaPlayer.start();
                 Intent intent = new Intent(MainActivity.this, Quran.class);
