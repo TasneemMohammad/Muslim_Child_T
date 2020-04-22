@@ -10,14 +10,20 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
+class DataBase {
 
-    public class DataBase extends SQLiteOpenHelper {
+
+    public static class DataBase_Quraan extends SQLiteOpenHelper {
         public static final String DB_NAME = " quraan_db ";
         public static final int DB_VERSION = 1;
+
+
         public static final String QURAAN_TABLE_NAME = "quraan";
         public static final String QURAAN_COLUMN_SORA = "name of sora";
         public static final String QURAAN_COLUMN_ID_IMG = "id ";
-        public DataBase(@Nullable Context context) {
+
+
+        public DataBase_Quraan(@Nullable Context context) {
             super(context, DB_NAME, null, DB_VERSION);
         }
 
@@ -46,7 +52,7 @@ import java.util.ArrayList;
             //else return true;
         }
 
-        public ArrayList<QuranDataBase> getAllQuran() {
+        public ArrayList<QuranDataBase> getallsor() {
             ArrayList<QuranDataBase> Quraa_card = new ArrayList<>();
             SQLiteDatabase sqLiteDatabase = getReadableDatabase();
             Cursor cursor = sqLiteDatabase.rawQuery(" SELECT * FROM " + QURAAN_TABLE_NAME, null);
@@ -64,9 +70,7 @@ import java.util.ArrayList;
             }
             return Quraa_card;
         }
-        /*
-
-         */
 
     }
+}
 
