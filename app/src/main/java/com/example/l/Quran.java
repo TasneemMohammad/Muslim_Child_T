@@ -20,7 +20,7 @@ public class Quran extends AppCompatActivity {
     RecyclerView recyclerView;
     LinearLayout linearLayout ;
     DataBase dataBase ;
-    TextView textView
+    TextView textView ;
     ArrayList<QuranDataBase> quraan_list ;
 
 
