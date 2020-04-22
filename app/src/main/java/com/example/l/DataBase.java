@@ -11,8 +11,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
 class DataBase {
-    public DataBase(Quran quran) {
-    }
+
 
     public static class DataBase_Quraan extends SQLiteOpenHelper {
         public static final String DB_NAME = " quraan_db ";
