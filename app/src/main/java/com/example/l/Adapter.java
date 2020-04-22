@@ -12,11 +12,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.myviewholder> {
-    ArrayList<modelQuran> arrayList;
+    ArrayList<QuranDataBase> arrayList;
     OnClickListener_Stories mylistener;
 
-    public Adapter(ArrayList<modelQuran> arrayList1, OnClickListener_Stories onClickListener_stories) {
-        this.arrayList = arrayList1;
+    public Adapter(ArrayList<QuranDataBase> arrayList1, OnClickListener_Stories onClickListener_stories) {
+        this.arrayList = arrayList;
         this.mylistener = onClickListener_stories;
 
     }
@@ -33,7 +33,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.myviewholder> {
     @Override
     public void onBindViewHolder(@NonNull Adapter.myviewholder holder, int position) {
         holder.textView.setText(arrayList.get(position).getName());
-        holder.imageView.setImageResource(arrayList.get(position).getImage());
+        holder.imageView.setImageResource(arrayList.get(position).getImg());
 
     }
 
@@ -49,8 +49,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.myviewholder> {
 
         public myviewholder(@NonNull View itemView) {
             super(itemView);
-            imageView = (ImageView) itemView.findViewById(R.id.icon);
-            textView = (TextView) itemView.findViewById(R.id.text);
+            imageView =  itemView.findViewById(R.id.img_quran);
+            textView =  itemView.findViewById(R.id.text);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

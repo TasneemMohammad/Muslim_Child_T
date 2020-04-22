@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class Quran extends AppCompatActivity {
     RecyclerView recyclerView;
-    LinearLayout linearLayout ;
+
     DataBase dataBase ;
     TextView textView ;
     ArrayList<QuranDataBase> quraan_list ;
@@ -30,19 +30,19 @@ public class Quran extends AppCompatActivity {
         setContentView(R.layout.activity_quran);
         textView = (TextView)findViewById(R.id.txt_title_name);
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
-        linearLayout = (LinearLayout) findViewById(R.id.linear_layout);
+
         quraan_list = new ArrayList<>();
         dataBase = new DataBase(this);
         QuranDataBase first = new QuranDataBase( " سورة عم ",R.drawable.boy);
         quraan_list = dataBase.getallsor() ;
-        AnimationDrawable animationDrawable = (AnimationDrawable) linearLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2000);
-        animationDrawable.setExitFadeDuration(5000);
-        animationDrawable.start();
+//        AnimationDrawable animationDrawable = (AnimationDrawable) linearLayout.getBackground();
+//        animationDrawable.setEnterFadeDuration(2000);
+//        animationDrawable.setExitFadeDuration(5000);
+//        animationDrawable.start();
 
-        ArrayList<modelQuran> quraan = new ArrayList<>();
 
-        Adapter adapter = new Adapter(quraan, new OnClickListener_Stories() {
+
+        Adapter adapter = new Adapter(quraan_list, new OnClickListener_Stories() {
             @Override
             public void onClick(int position) {
                 Intent intent = new Intent(Quran.this,web_view_quraan.class);
