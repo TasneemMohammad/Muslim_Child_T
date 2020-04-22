@@ -20,6 +20,8 @@ public class Quran extends AppCompatActivity {
     LinearLayout linearLayout ;
     DataBase dataBase ;
     ArrayList<QuranDataBase> quraan_list ;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +31,7 @@ public class Quran extends AppCompatActivity {
         quraan_list = new ArrayList<>();
         dataBase = new DataBase(this);
         QuranDataBase first = new QuranDataBase( " سورة عم ",R.drawable.boy);
-        quraan_list = dataBase.getAllQuran();
+        quraan_list = dataBase.getallsor() ;
         AnimationDrawable animationDrawable = (AnimationDrawable) linearLayout.getBackground();
         animationDrawable.setEnterFadeDuration(2000);
         animationDrawable.setExitFadeDuration(5000);
