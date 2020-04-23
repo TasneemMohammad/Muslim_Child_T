@@ -34,6 +34,7 @@ public class Anbyaa_Stories extends AppCompatActivity {
         final ArrayList<String>MB3page =new ArrayList<>();
         MB3page.add("test");
         MB3page.add("test2");
+        MB3page.add("testlHtm");
 
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_anbyaa__stories);
