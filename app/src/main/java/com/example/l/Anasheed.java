@@ -19,6 +19,7 @@ public class Anasheed extends AppCompatActivity {
     TextView tv_current_time , tv_total_time , tv_title;
     ImageView img_next , img_before , img_play;
     ArrayList<Anasheed_Card> sounds_array;
+    int before , next ;
     MediaPlayer sound  = new MediaPlayer();
     String [] Titles = {"الله ربى والإسلام دينى", "أركان الإسلام" ,"محمد نبينا" , "الصلاة" , "قرآنى" , "الله أكبر بسم الله" , "طلع البدر علينا" ,"أهلاً رمضان" ,"الشهور الهجرية"}; // anasheed _names;
     int [] sounds = {R.raw.allahrbeandeleslamdeeny ,R.raw.arkaneleslam ,R.raw.mohamedisourprophet,R.raw.thepray ,R.raw.myquraan,R.raw.allahakbarbesmellah
@@ -35,6 +36,7 @@ public class Anasheed extends AppCompatActivity {
         img_before = findViewById(R.id.btn_before);
         img_next = findViewById(R.id.btn_after);
         img_play = findViewById(R.id.btn_play);
+
         sounds_array = new ArrayList<>();
         for (int i = 0; i < sounds.length; i++) {
             sounds_array.add(new Anasheed_Card(Titles[i], sounds[i]));
@@ -45,6 +47,8 @@ public class Anasheed extends AppCompatActivity {
                 sound.stop();
                 sound.reset();
                 sound = MediaPlayer.create(Anasheed.this,sounds_array.get(position).sound);
+                 next = position++;
+                before = position--;
               //  tv_title.setText(Titles[position]);
                 tv_title.setText(sounds_array.get(position).getTitle());
                 soundTime();
@@ -75,14 +79,31 @@ public class Anasheed extends AppCompatActivity {
                                 }
                                 };
                     sound.start();
+                    img_play.setImageResource(R.drawable.ic_pause_black_24dp);
                     updateSeekBar.start();
                 }else {
-                    img_play.setImageResource(R.drawable.ic_pause_black_24dp);
+                    img_play.setImageResource(R.drawable.ic_play_arrow_black_24dp);
                     sound.pause();
                     return;
                       }
                       }
                       });
+
+        img_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sound = MediaPlayer.create(Anasheed.this,sounds_array.get(next).sound);
+
+            }
+        });
+
+        img_before.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sound = MediaPlayer.create(Anasheed.this,sounds_array.get(before).sound);
+
+            }
+        });
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
