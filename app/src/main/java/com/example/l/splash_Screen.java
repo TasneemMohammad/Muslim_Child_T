@@ -15,7 +15,6 @@ public class splash_Screen extends AppCompatActivity {
         setContentView(R.layout.activity_splash__screen);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Thread thread=new Thread(){
-
             @Override
             public void run() {
                 try {

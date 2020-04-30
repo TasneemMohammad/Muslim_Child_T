@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.myviewholder> {
     ArrayList<QuranDataBase> arrayList;
-    OnClickListener_Stories mylistener;
+    OnClickListener_Stories_anasheed mylistener;
 
-    public Adapter(ArrayList<QuranDataBase> arrayList1, OnClickListener_Stories onClickListener_stories) {
+    public Adapter(ArrayList<QuranDataBase> arrayList1, OnClickListener_Stories_anasheed onClickListener_stories) {
         this.arrayList = arrayList;
         this.mylistener = onClickListener_stories;
 

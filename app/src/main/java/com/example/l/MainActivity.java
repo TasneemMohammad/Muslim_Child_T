@@ -49,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mediaPlayer.start();
+                Intent intent = new Intent(MainActivity.this, splash_anasheed.class);
+                startActivity(intent);
+
             }
         });
         img_quran.setOnClickListener(new View.OnClickListener() {

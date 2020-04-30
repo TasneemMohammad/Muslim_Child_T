@@ -10,13 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.concurrent.Callable;
 
 public class Recycler_Adapter_Stories extends RecyclerView.Adapter<Recycler_Adapter_Stories.ViewHolderStories> {
 
-    OnClickListener_Stories listener_stories ;
+    OnClickListener_Stories_anasheed listener_stories ;
     ArrayList<Stories_Card> arrayList ;
-    public Recycler_Adapter_Stories( ArrayList<Stories_Card> arrayList, OnClickListener_Stories listener_stories) {
+    public Recycler_Adapter_Stories(ArrayList<Stories_Card> arrayList, OnClickListener_Stories_anasheed listener_stories) {
         this.listener_stories = listener_stories;
         this.arrayList = arrayList;
     }

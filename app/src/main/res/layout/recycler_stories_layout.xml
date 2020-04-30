@@ -2,12 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-
-
+    android:layout_height="match_parent">
         <RelativeLayout
-android:layout_marginRight="5dp"
+            android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -15,28 +12,21 @@ android:layout_marginRight="5dp"
             android:background="@drawable/recs_tyle"
             android:layout_marginBottom="5dp"
             android:layout_marginTop="10dp"
-            android:elevation="50dp"
-            >
-
+            android:elevation="50dp">
         <de.hdodenhof.circleimageview.CircleImageView
             android:background="@android:color/transparent"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/img_story"
             app:civ_border_color="@color/colorPrimary"
-
-android:layout_margin="10dp"
-
-
-            />
+            android:layout_margin="10dp" />
             <TextView
-android:layout_marginRight="10dp"
-
+                android:layout_marginRight="10dp"
                 android:id="@+id/tv_story_name"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:textColor="#68230E"
-android:shadowDx="4"
+                android:shadowDx="4"
                 android:shadowDy="4"
                 android:shadowRadius="17"
                 android:shadowColor="#93000000"

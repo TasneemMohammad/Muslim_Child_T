@@ -1,16 +1,11 @@
 package com.example.l;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,7 +37,7 @@ public class Quran extends AppCompatActivity {
 
 
 
-        Adapter adapter = new Adapter(quraan_list, new OnClickListener_Stories() {
+        Adapter adapter = new Adapter(quraan_list, new OnClickListener_Stories_anasheed() {
             @Override
             public void onClick(int position) {
                 Intent intent = new Intent(Quran.this,web_view_quraan.class);
