@@ -36,7 +36,7 @@ public class Anasheed extends AppCompatActivity {
         img_before = findViewById(R.id.btn_before);
         img_next = findViewById(R.id.btn_after);
         img_play = findViewById(R.id.btn_play);
-
+//
         sounds_array = new ArrayList<>();
         for (int i = 0; i < sounds.length; i++) {
             sounds_array.add(new Anasheed_Card(Titles[i], sounds[i]));
