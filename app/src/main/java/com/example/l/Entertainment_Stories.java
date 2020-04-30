@@ -67,7 +67,7 @@ protected void onCreate(Bundle savedInstanceState) {
 public void onClick(int position) {
 
         //   name_story.start();
-        Intent intent = new Intent(Entertainment_Stories.this, webView_Educational_Stories.class);
+        Intent intent = new Intent(Entertainment_Stories.this, webView_Entertainment_Stories.class);
         intent.putExtra("storyName", storyNames[position]);
         intent.putExtra("page", MB3page.get(position));
         intent.putExtra("sound", MB3Sounds.get(position));

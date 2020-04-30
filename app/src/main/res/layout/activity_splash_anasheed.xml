@@ -12,7 +12,7 @@
         android:layout_margin="10dp"
         android:elevation="40dp"
         app:cardCornerRadius="20dp"
-        android:background="@drawable/backanasheed"
+        android:background="@drawable/anasheedbus"
         app:cardBackgroundColor="@android:color/holo_blue_dark">
 
 <!--        <ImageView-->

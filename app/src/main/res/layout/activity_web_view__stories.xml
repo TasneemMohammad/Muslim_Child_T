@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".webView_Anbyaa_Stories"
-    android:background="@color/colorAccent">
+    android:background="@drawable/webanbyaa">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +21,8 @@
            android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
             android:layout_marginTop="5dp"
-            android:textColor="@android:color/holo_red_dark"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
             />
         <WebView
             android:id="@+id/webView__anbyaa_stories"

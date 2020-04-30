@@ -25,7 +25,7 @@
                 android:id="@+id/tv_story_name"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:textColor="#68230E"
+                android:textColor= "@android:color/holo_green_dark"
                 android:shadowDx="4"
                 android:shadowDy="4"
                 android:shadowRadius="17"

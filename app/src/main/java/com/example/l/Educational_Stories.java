@@ -17,7 +17,7 @@ public class Educational_Stories extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_anbyaa__stories);
+        setContentView(R.layout.activity_educational__stories);
       //  final MediaPlayer name_story=MediaPlayer.create(Educational_Stories.this, R.raw.adam_voice);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN); // ??
         db = new DataBase_Stories(this);
