@@ -21,7 +21,7 @@ public class Anasheed extends AppCompatActivity {
     ArrayList<Anasheed_Card> sounds_array;
     int before , next ;
     MediaPlayer sound  = new MediaPlayer();
-    String [] Titles = {"الله ربى والإسلام دينى", "أركان الإسلام" ,"محمد نبينا" , "الصلاة" , "قرآنى" , "الله أكبر بسم الله" , "طلع البدر علينا" ,"أهلاً رمضان" ,"الشهور الهجرية"}; // anasheed _names;
+String [] Titles = {"الله ربى والإسلام دينى", "أركان الإسلام" ,"محمد نبينا" , "الصلاة" , "قرآنى" , "الله أكبر بسم الله" , "طلع البدر علينا" ,"أهلاً رمضان" ,"الشهور الهجرية"}; // anasheed _names;
     int [] sounds = {R.raw.allahrbeandeleslamdeeny ,R.raw.arkaneleslam ,R.raw.mohamedisourprophet,R.raw.thepray ,R.raw.myquraan,R.raw.allahakbarbesmellah
             ,R.raw.tl3elbadr3lyna ,R.raw.ahlanramadan,R.raw.elshhoorelhegrya};   // anasheed
 
