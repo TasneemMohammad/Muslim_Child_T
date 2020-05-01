@@ -24,7 +24,6 @@
             android:textColor="@android:color/background_dark"
             android:textStyle="bold"
             />
-
         <WebView
             android:id="@+id/webView__anbyaa_stories"
             android:layout_width="match_parent"

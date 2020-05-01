@@ -18,9 +18,9 @@
         android:layout_marginBottom="5dp"
         android:background="@color/colorAccent"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
-        app:cardBackgroundColor="#D5D2D2"
-        app:cardElevation="25dp"
+        android:layout_height="120dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="40dp"
         android:layout_alignParentBottom="true"
         tools:ignore="NotSibling">
         <LinearLayout
@@ -32,6 +32,7 @@
                 android:layout_marginTop="7dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/seekBar"
+                android:thumbTint="@color/color_1"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,6 +47,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="10dp"
+                    android:textColor="@color/color_1"
                     android:text="currentTime" />
                 <TextView
                     android:id="@+id/tv_title"
@@ -55,7 +57,8 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="120dp"
-                    android:textColor="@color/pink"
+                    android:textColor="@color/color_1"
+                    android:textStyle=""
                     android:text="Title" />
 
                 <TextView
@@ -67,6 +70,8 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="120dp"
                     android:layout_marginRight="5dp"
+                    android:textColor="@color/color_1"
+                    android:textStyle="bold"
                     android:text="tootalTime" />
             </LinearLayout>
             <LinearLayout

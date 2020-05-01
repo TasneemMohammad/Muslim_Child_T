@@ -3,7 +3,12 @@
     <color name="colorPrimary">@android:color/transparent</color>
     <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#C1EDF1</color>
-    <color name="pink">#C3FF699C</color>
+    <color name="pink">#C3C13B68</color>
     <color name="light_blue" />
+    <color name="dark_red">#C38C062A</color>
+    <color name="color_1">#B31B1B</color>
+    <color name="color_2">#B10F0F</color>
+    <color name="color_3">#B0B84C70</color>
+
     <color name="BEG" />
 </resources>
