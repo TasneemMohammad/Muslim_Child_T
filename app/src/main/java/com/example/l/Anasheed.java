@@ -24,6 +24,14 @@ public class Anasheed extends AppCompatActivity {
     String [] Titles = {"الله ربى والإسلام دينى", "أركان الإسلام" ,"محمد نبينا" , "الصلاة" , "قرآنى" , "الله أكبر بسم الله" , "طلع البدر علينا" ,"أهلاً رمضان" ,"الشهور الهجرية"}; // anasheed _names;
     int [] sounds = {R.raw.allahrbeandeleslamdeeny ,R.raw.arkaneleslam ,R.raw.mohamedisourprophet,R.raw.thepray ,R.raw.myquraan,R.raw.allahakbarbesmellah
             ,R.raw.tl3elbadr3lyna ,R.raw.ahlanramadan,R.raw.elshhoorelhegrya};   // anasheed
+
+    public  void onBackPressed(){
+        super.onBackPressed();
+        if(sound.isPlaying()){
+            sound.pause();
+            sound.release();
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -133,7 +141,7 @@ public class Anasheed extends AppCompatActivity {
             int s0 = tim0 % 60 ;
 
             tv_total_time.setText(m + " : " + s);
-            tv_current_time.setText(m0 + " : " + m0);
+            tv_current_time.setText(m0 + " : " + s0);
            }
            }
 

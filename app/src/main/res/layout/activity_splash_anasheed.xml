@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".splash_anasheed">
+    tools:context=".splash_anasheed"
+    android:background="@drawable/anasheedbus">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:elevation="40dp"
-        app:cardCornerRadius="20dp"
-        android:background="@drawable/anasheedbus"
-        app:cardBackgroundColor="@android:color/holo_blue_dark">
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:elevation="40dp"-->
+<!--        app:cardCornerRadius="20dp"-->
+<!--        android:background="@drawable/anasheedbus"-->
+<!--        >-->
 
 <!--        <ImageView-->
 <!--            android:layout_width="match_parent"-->
@@ -24,6 +25,6 @@
 <!--            android:elevation="50dp"-->
 
 
-    </androidx.cardview.widget.CardView>
+<!--    </androidx.cardview.widget.CardView>-->
 
 </RelativeLayout>

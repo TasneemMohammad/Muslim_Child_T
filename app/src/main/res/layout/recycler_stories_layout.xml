@@ -3,39 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-        <RelativeLayout
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:layout_margin="10dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/recs_tyle"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="10dp"
-            android:elevation="50dp">
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:background="@android:color/transparent"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/img_story"
-            app:civ_border_color="@color/colorPrimary"
-            android:layout_margin="10dp" />
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="50dp"
+            app:cardCornerRadius="20dp">
+
             <TextView
                 android:layout_marginRight="10dp"
                 android:id="@+id/tv_story_name"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:textColor= "@android:color/holo_green_dark"
+                android:textColor= "#51A237"
                 android:shadowDx="4"
                 android:shadowDy="4"
                 android:shadowRadius="17"
                 android:shadowColor="#93000000"
-                android:layout_marginTop="20dp"
+               android:layout_margin="5dp"
                 android:layout_alignParentRight="true"
                 android:textSize="20dp"
                 android:textStyle="bold"
                />
-        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
 
 </LinearLayout>

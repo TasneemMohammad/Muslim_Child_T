@@ -17,15 +17,29 @@ import android.widget.TextView;
 import java.lang.reflect.Array;
 
 public class webView_Anbyaa_Stories extends AppCompatActivity {
-    TextView tv_name_story ;
+    TextView tv_name_story,tv_current_time , tv_total_time ;
     ImageView btn_after, btn_play, btn_before;
     SeekBar seekBar;
     Runnable runnable;
     Handler handler;
     MediaPlayer sound;
+
+    @Override
+
+    public  void onBackPressed(){
+        super.onBackPressed();
+        if(sound.isPlaying()){
+            sound.pause();
+            sound.release();
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        tv_current_time=findViewById(R.id.tv_current_time);
+        tv_total_time=findViewById(R.id.tv_total_time);
         setContentView(R.layout.activity_web_view__stories);
         tv_name_story = findViewById(R.id.tv_anbyaa_storyName);
         btn_after = findViewById(R.id.btn_after);
@@ -38,9 +52,11 @@ public class webView_Anbyaa_Stories extends AppCompatActivity {
         String page = getIntent().getExtras().getString("page");
         tv_name_story.setText(storyName);
         WebView webview = (WebView) findViewById(R.id.webView__anbyaa_stories);
-        webview.setBackgroundColor(Color.parseColor("#C1EDF1"));   //****
+        webview.setBackgroundColor(0x00FFFFFF);   //****
         webview.loadUrl("file:///android_asset/" + page + ".html");
         webview.requestFocus();
+
+
 
         final ProgressDialog progressDialog = new ProgressDialog(this);   // why final ??
         progressDialog.setMessage("Loading");
@@ -56,37 +72,13 @@ public class webView_Anbyaa_Stories extends AppCompatActivity {
                 }
             }
         });
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                sound.seekTo(sound.getCurrentPosition());
-            }
 
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                sound.seekTo(sound.getCurrentPosition());
-
-            }
-        });
-        sound = MediaPlayer.create(webView_Anbyaa_Stories.this, sound_rec);
-        sound.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                seekBar.setMax(sound.getDuration());
-                sound.start();
-                changeSeekbar();
-            }
-        });
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if(fromUser){
                     sound.seekTo(progress);
+                    soundTime();
                 }
             }
 
@@ -100,9 +92,21 @@ public class webView_Anbyaa_Stories extends AppCompatActivity {
 
             }
         });
+        sound = MediaPlayer.create(webView_Anbyaa_Stories.this, sound_rec);
+        sound.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp)
+            {
+                seekBar.setMax(sound.getDuration());
+               sound.start();
+                changeSeekbar();
+
+            }
+        });
         btn_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
                 if (sound.isPlaying()) {
 
@@ -148,7 +152,31 @@ public class webView_Anbyaa_Stories extends AppCompatActivity {
                 }
             };
             handler.postDelayed(runnable,1000);
-        } }}
+        } }
+
+
+
+    public void soundTime(){
+        seekBar.setMax(sound.getDuration());  // totalTime
+        int tim = (seekBar.getMax()/1000);   // bnksemha for 1000 lhza ..
+        int m = tim / 60;
+        int s = tim % 60 ;
+
+        int tim0 = (seekBar.getProgress() / 1000);  // get time from movement
+        int m0 = tim0 / 60 ;
+        int s0 = tim0 % 60 ;
+
+        tv_total_time.setText(m + " : " + s);
+        tv_current_time.setText(m0 + " : " + s0);
+    }
+
+
+
+
+
+
+
+}
 //private void changeSeekbar(){
 //        seekBar.setProgress(sound.getCurrentPosition());
 //        if (sound.isPlaying()){

@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        final MediaPlayer media =MediaPlayer.create(this,R.raw.qassas_voice);
         final MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.sound);
         img_stories = findViewById(R.id.btn_stories);
         img_anasheed = findViewById(R.id.btn_anasheed);
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         img_stories.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mediaPlayer.start();
+                media.start();
                 Intent intent = new Intent(MainActivity.this, Stories.class);
                 startActivity(intent);
             }

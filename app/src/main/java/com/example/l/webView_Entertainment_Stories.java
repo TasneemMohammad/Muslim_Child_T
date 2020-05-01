@@ -24,8 +24,18 @@ public class webView_Entertainment_Stories extends AppCompatActivity {
     Handler handler;
     MediaPlayer sound;
     @Override
+
+    public  void onBackPressed(){
+        super.onBackPressed();
+        if(sound.isPlaying()){
+            sound.pause();
+            sound.release();
+        }
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_entertainment__stories);
         tv_name_story = findViewById(R.id.tv_enter_storyName);
         btn_after = findViewById(R.id.btn_after);

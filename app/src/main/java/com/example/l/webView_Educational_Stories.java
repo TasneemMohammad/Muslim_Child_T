@@ -23,6 +23,15 @@ public class webView_Educational_Stories extends AppCompatActivity {
     Handler handler;
     MediaPlayer sound;
     @Override
+
+    public  void onBackPressed(){
+        super.onBackPressed();
+        if(sound.isPlaying()){
+            sound.pause();
+            sound.release();
+        }
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view__educational__stories);

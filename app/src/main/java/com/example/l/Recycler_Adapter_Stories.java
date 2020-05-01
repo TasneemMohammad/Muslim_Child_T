@@ -31,7 +31,7 @@ public class Recycler_Adapter_Stories extends RecyclerView.Adapter<Recycler_Adap
     @Override
     public void onBindViewHolder(@NonNull ViewHolderStories holder, int position) {
         Stories_Card c =  arrayList.get(position);
-        holder.img_story .setImageResource(c.getId());
+
         holder.tv_story_name.setText(c.getNameStory());
 
     }
@@ -41,11 +41,11 @@ public class Recycler_Adapter_Stories extends RecyclerView.Adapter<Recycler_Adap
         return arrayList.size();
     }
     class ViewHolderStories extends RecyclerView.ViewHolder{
-        ImageView img_story ;
+
         TextView tv_story_name;
         public ViewHolderStories(@NonNull View itemView) {
             super(itemView);
-            img_story = itemView.findViewById(R.id.img_story);
+
             tv_story_name = itemView.findViewById(R.id.tv_story_name);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class DataBase_Stories extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "story_db" ;
-    public static final int DB_ID = 1 ;
+    public static final int DB_ID = 2 ;
     public static  final  String STORY_TB_NAME = "story";
     public static final String STORY_CLN_STORYNAME = "StoryName";
     public static final String STORY_CLN_ID_IMG = "IdImage";
