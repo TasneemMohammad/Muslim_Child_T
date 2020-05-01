@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
         <androidx.cardview.widget.CardView
             android:layout_margin="10dp"
-            android:layout_width="350dp"
+            android:layout_width="388dp"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@android:color/transparent"
             app:cardElevation="50dp"
@@ -13,6 +13,7 @@
 
             <TextView
                 android:layout_marginRight="10dp"
+                android:paddingRight="10dp"
                 android:id="@+id/tv_story_name"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
@@ -20,7 +21,7 @@
                 android:shadowDx="4"
                 android:shadowDy="4"
                 android:shadowRadius="17"
-                android:shadowColor="#93000000"
+                android:shadowColor="#93FBFBFB"
                android:layout_margin="5dp"
                 android:layout_alignParentRight="true"
                 android:textSize="20dp"

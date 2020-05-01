@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mediaPlayer.start();
-                Intent intent = new Intent(MainActivity.this, splash_anasheed.class);
+                Intent intent = new Intent(MainActivity.this,Anasheed.class);
                 startActivity(intent);
 
             }

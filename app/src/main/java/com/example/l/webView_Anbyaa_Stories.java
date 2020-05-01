@@ -78,7 +78,7 @@ public class webView_Anbyaa_Stories extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if(fromUser){
                     sound.seekTo(progress);
-                    soundTime();
+
                 }
             }
 

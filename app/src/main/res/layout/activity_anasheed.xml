@@ -8,6 +8,8 @@
     android:background="@drawable/backanasheed"
     tools:context=".Anasheed">
    <androidx.recyclerview.widget.RecyclerView
+       android:layout_marginTop="50dp"
+       android:layout_marginLeft="90dp"
        android:id="@+id/rv_anasheed"
        android:layout_width="match_parent"
        android:layout_height="580dp"
@@ -16,7 +18,7 @@
         app:cardCornerRadius="10dp"
         android:layout_margin="5dp"
         android:layout_marginBottom="5dp"
-        android:background="@color/colorAccent"
+
         android:layout_width="match_parent"
         android:layout_height="120dp"
         app:cardBackgroundColor="@android:color/transparent"
@@ -41,9 +43,9 @@
                 >
                 <TextView
                     android:id="@+id/tv_current_time"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:layout_weight="1"
+
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="10dp"
@@ -51,9 +53,9 @@
                     android:text="currentTime" />
                 <TextView
                     android:id="@+id/tv_title"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:layout_weight="1"
+
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="120dp"
@@ -63,9 +65,9 @@
 
                 <TextView
                     android:id="@+id/tv_total_time"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:layout_weight="1"
+
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="120dp"
@@ -95,7 +97,7 @@
                     android:layout_weight="1"
                     android:layout_height="50dp"
                     android:gravity="center_vertical"
-                    android:src= "@drawable/ic_play_arrow_black_24dp"
+                    android:src= "@drawable/ic_play_arrow_ansheed_24dp"
                     android:layout_marginLeft="120dp"
                     />
                 <ImageView

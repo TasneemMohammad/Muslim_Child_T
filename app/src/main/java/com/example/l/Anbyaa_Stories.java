@@ -19,7 +19,12 @@ public class Anbyaa_Stories extends AppCompatActivity {
     ArrayList<Stories_Card> Stories;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         final String [] storyNames = {"قصة آدم", "قصة نوح", "قصة هود","قصصة صالح", "قصة إبراهيم" , "قصة يونس" , "قصة موسى", "قصة داوود وسليمان" ,"قصة محمد",};
+
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
         final ArrayList<Integer>MB3Sounds =new ArrayList<>();
         MB3Sounds .add(R.raw.sydnaadam);
         MB3Sounds .add(R.raw.sydnanooh);
@@ -43,8 +48,8 @@ public class Anbyaa_Stories extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_anbyaa__stories);
         final MediaPlayer name_story=MediaPlayer.create(Anbyaa_Stories.this, raw.adam_voice);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN); // ??
-        db = new DataBase_Stories(this);
+
+//        db = new DataBase_Stories(this);
         rv_anbyaa_stories = (RecyclerView)findViewById(id.rv_anbyaa_stories);
         Stories = new ArrayList<>();        // khleh yget men el data base ;
     Stories_Card story1 = new Stories_Card("قصة سيدنا آدم" , drawable.icon);
@@ -56,8 +61,16 @@ public class Anbyaa_Stories extends AppCompatActivity {
         Stories_Card story7 = new Stories_Card("قصة سيدنا موسى" , drawable.icon);
         Stories_Card story8 = new Stories_Card("قصة سيدنا داوود وسيدنا سليمان" , drawable.icon);
         Stories_Card story9 = new Stories_Card("قصة سيدنا محمد" , drawable.icon);
-
-        Stories = db.getAllStories();
+Stories.add(story1);
+        Stories.add(story2);
+        Stories.add(story3);
+        Stories.add(story4);
+        Stories.add(story5);
+        Stories.add(story6);
+        Stories.add(story7);
+        Stories.add(story8);
+        Stories.add(story9);
+//        Stories = db.getAllStories();
         Recycler_Adapter_Stories adapter_stories = new Recycler_Adapter_Stories(Stories, new OnClickListener_Stories_anasheed() {
             @Override
             public void onClick(int position) {
@@ -71,15 +84,15 @@ public class Anbyaa_Stories extends AppCompatActivity {
             }
         }
         );
-        db.insertStory(story1);
-        db.insertStory(story2);
-        db.insertStory(story3);
-        db.insertStory(story4);
-        db.insertStory(story5);
-        db.insertStory(story6);
-        db.insertStory(story7);
-        db.insertStory(story8);
-        db.insertStory(story9);
+//        db.insertStory(story1);
+//        db.insertStory(story2);
+//        db.insertStory(story3);
+//        db.insertStory(story4);
+//        db.insertStory(story5);
+//        db.insertStory(story6);
+//        db.insertStory(story7);
+//        db.insertStory(story8);
+//        db.insertStory(story9);
         rv_anbyaa_stories.setAdapter(adapter_stories);
         rv_anbyaa_stories.setLayoutManager(new LinearLayoutManager(Anbyaa_Stories.this));
 

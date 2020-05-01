@@ -25,15 +25,10 @@ public class Anasheed extends AppCompatActivity {
     int [] sounds = {R.raw.allahrbeandeleslamdeeny ,R.raw.arkaneleslam ,R.raw.mohamedisourprophet,R.raw.thepray ,R.raw.myquraan,R.raw.allahakbarbesmellah
             ,R.raw.tl3elbadr3lyna ,R.raw.ahlanramadan,R.raw.elshhoorelhegrya};   // anasheed
 
-    public  void onBackPressed(){
-        super.onBackPressed();
-        if(sound.isPlaying()){
-            sound.pause();
-            sound.release();
-        }
-    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anasheed);
         rv_anasheed = findViewById(R.id.rv_anasheed);
@@ -87,10 +82,10 @@ public class Anasheed extends AppCompatActivity {
                                 }
                                 };
                     sound.start();
-                    img_play.setImageResource(R.drawable.ic_pause_black_24dp);
+                    img_play.setImageResource(R.drawable.ic_pause_anasheed_24dp);
                     updateSeekBar.start();
                 }else {
-                    img_play.setImageResource(R.drawable.ic_play_arrow_black_24dp);
+                    img_play.setImageResource(R.drawable.ic_play_arrow_ansheed_24dp);
                     sound.pause();
                     return;
                       }
