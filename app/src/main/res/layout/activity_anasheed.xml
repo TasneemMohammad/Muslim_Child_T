@@ -8,8 +8,6 @@
     android:background="@drawable/backanasheed"
     tools:context=".Anasheed">
    <androidx.recyclerview.widget.RecyclerView
-       android:layout_marginTop="100dp"
-       android:layout_marginLeft="50dp"
        android:id="@+id/rv_anasheed"
        android:layout_width="match_parent"
        android:layout_height="580dp"
@@ -20,9 +18,9 @@
         android:layout_marginBottom="5dp"
         android:background="@color/colorAccent"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
-        app:cardBackgroundColor="#D5D2D2"
-        app:cardElevation="25dp"
+        android:layout_height="120dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="40dp"
         android:layout_alignParentBottom="true"
         tools:ignore="NotSibling">
         <LinearLayout
@@ -30,11 +28,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <SeekBar
-
                 android:layout_width="match_parent"
                 android:layout_marginTop="7dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/seekBar"
+                android:thumbTint="@color/color_1"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -43,34 +41,37 @@
                 >
                 <TextView
                     android:id="@+id/tv_current_time"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="30dp"
-
+                    android:layout_weight="1"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="10dp"
+                    android:textColor="@color/color_1"
                     android:text="currentTime" />
-
                 <TextView
                     android:id="@+id/tv_title"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="30dp"
-
+                    android:layout_weight="1"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="120dp"
                     android:layout_marginTop="5dp"
-                    android:text="Title"
-                    android:textColor="#D5A4A8" />
+                    android:layout_marginLeft="120dp"
+                    android:textColor="@color/color_1"
+                    android:textStyle=""
+                    android:text="Title" />
 
                 <TextView
                     android:id="@+id/tv_total_time"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="30dp"
-
+                    android:layout_weight="1"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="120dp"
                     android:layout_marginRight="5dp"
+                    android:textColor="@color/color_1"
+                    android:textStyle="bold"
                     android:text="tootalTime" />
             </LinearLayout>
             <LinearLayout

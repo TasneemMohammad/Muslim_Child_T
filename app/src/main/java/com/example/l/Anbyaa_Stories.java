@@ -19,7 +19,7 @@ public class Anbyaa_Stories extends AppCompatActivity {
     ArrayList<Stories_Card> Stories;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        final String [] storyNames = {"قصة أدم", "قصة نوح", "قصة هود","قصصة صالح", "قصة إبراهيم" , "قصة يونس" , "قصة موسى", "قصة داوود وسليمان" ,"قصة محمد",};
+        final String [] storyNames = {"قصة آدم", "قصة نوح", "قصة هود","قصصة صالح", "قصة إبراهيم" , "قصة يونس" , "قصة موسى", "قصة داوود وسليمان" ,"قصة محمد",};
         final ArrayList<Integer>MB3Sounds =new ArrayList<>();
         MB3Sounds .add(R.raw.sydnaadam);
         MB3Sounds .add(R.raw.sydnanooh);
