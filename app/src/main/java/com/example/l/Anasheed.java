@@ -19,7 +19,7 @@ public class Anasheed extends AppCompatActivity {
     TextView tv_current_time , tv_total_time , tv_title;
     ImageView img_next , img_before , img_play;
     ArrayList<Anasheed_Card> sounds_array;
-    int before , next ;
+   int before , next ;
     MediaPlayer sound  = new MediaPlayer();
 String [] Titles = {"الله ربى والإسلام دينى", "أركان الإسلام" ,"محمد نبينا" , "الصلاة" , "قرآنى" , "الله أكبر بسم الله" , "طلع البدر علينا" ,"أهلاً رمضان" ,"الشهور الهجرية"}; // anasheed _names;
     int [] sounds = {R.raw.allahrbeandeleslamdeeny ,R.raw.arkaneleslam ,R.raw.mohamedisourprophet,R.raw.thepray ,R.raw.myquraan,R.raw.allahakbarbesmellah
